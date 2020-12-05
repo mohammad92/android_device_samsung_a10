@@ -1,0 +1,6 @@
+ro.display.series=Samsung A10
+ro.product.board=universal7885
+ro.board.platform=exynos5
+sys.usb.controller=13600000.dwc3
+#fbe.metadata.wrappedkey=true
+ro.boot.bootdevice=13500000.dwmmc0

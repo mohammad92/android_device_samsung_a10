@@ -1,0 +1,24 @@
+# mount point	fstype	device	device2						flags
+/system		ext4	/dev/block/platform/13500000.dwmmc0/by-name/system	flags=display="System"
+/system_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/system	flags=backup=1;flashimg
+/vendor		ext4	/dev/block/platform/13500000.dwmmc0/by-name/vendor	flags=display="Vendor";backup=1;wipeingui
+/vendor_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/vendor	flags=backup=1;flashimg
+/product	ext4	/dev/block/platform/13500000.dwmmc0/by-name/product	flags=backup=0;display="Product"
+/product_image	emmc	/dev/block/platform/13500000.dwmmc0/by-name/product	flags=backup=1;flashimg
+
+/boot		emmc	/dev/block/platform/13500000.dwmmc0/by-name/boot
+/recovery	emmc	/dev/block/platform/13500000.dwmmc0/by-name/recovery
+/data		ext4	/dev/block/platform/13500000.dwmmc0/by-name/userdata	flags=wait;encryptable=footer;length=-20480
+/cache		ext4	/dev/block/platform/13500000.dwmmc0/by-name/cache	flags=backup=1;display="Cache"
+/efs		ext4	/dev/block/platform/13500000.dwmmc0/by-name/efs		flags=backup=1;display="EFS"
+/cpefs		ext4	/dev/block/platform/13500000.dwmmc0/by-name/cpefs	flags=backup=1;subpartitionof=/efs
+/modem		emmc	/dev/block/platform/13500000.dwmmc0/by-name/radio	flags=backup=1;display="Modem"
+/misc		emmc	/dev/block/platform/13500000.dwmmc0/by-name/misc
+/cp_debug	emmc	/dev/block/platform/13500000.dwmmc0/by-name/cp_debug	flags=backup=1;display="CP Debug"
+/param		emmc	/dev/block/platform/13500000.dwmmc0/by-name/param	flags=backup=1;display="Param"
+/dtb		emmc	/dev/block/platform/13500000.dwmmc0/by-name/dtb		flags=backup=1;display="DTB"
+/dtbo		emmc	/dev/block/platform/13500000.dwmmc0/by-name/dtbo	flags=backup=1;display="Dtbo"
+
+# Removable storage
+/external_sd	vfat	/dev/block/mmcblk1p1	/dev/block/mmcblk1		flags=storage;wipeingui;removable
+/usb-otg	vfat	/dev/block/sda1	/dev/block/sda				flags=display="USB-OTG";storage;wipeingui;removable
